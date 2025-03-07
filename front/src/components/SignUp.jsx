@@ -61,7 +61,7 @@ const SignUp = () => {
               onChange={(e) => setUsername(e.target.value)}
               required
             />
-            <label htmlFor="id_number">User_ID</label>
+            {/* <label htmlFor="id_number">User_ID</label>
             <input
               type="number"
               id='id_number'
@@ -69,7 +69,7 @@ const SignUp = () => {
               value={id_number}
               onChange={(e) => setId(e.target.value)}
               required
-            />
+            /> */}
             <label htmlFor="password">Password</label>
             <input
               type="password"

@@ -91,6 +91,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa';
 import "./Login.css"; 
 
 const Login = () => {
@@ -114,7 +115,7 @@ const Login = () => {
       if (response.data.msg === 'Login successful') {
         // Store user data in local storage
         localStorage.setItem('user', JSON.stringify(response.data.user));
-        alert('Login successful!');
+        // alert('Login successful!');
         navigate('/admin'); 
       }
     } catch (error) {
@@ -127,7 +128,7 @@ const Login = () => {
       
       <div className="box">
         <div className="Signupform">
-          <h2>Login</h2>
+          <h2> Admin Login</h2>
           {error && <p className="error">{error}</p>}
           <input
             type="text"
@@ -144,7 +145,10 @@ const Login = () => {
           <div className="btnarea">
             <button onClick={handleLogin}>Login</button>
           </div>
-          <p>Create an account? <a href='/signup'>SignUp</a></p>
+          {/* <p>Create an account? <a href='/signup'>SignUp</a></p> */}
+          <button className="home-button" onClick={() => navigate('/')}> 
+            <FaHome size={20} />
+          </button>
         </div>
       </div>
     </div>

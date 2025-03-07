@@ -8,6 +8,7 @@ import Dashboard from './Dashboard';
  import "bootstrap/dist/css/bootstrap.min.css";
  import "bootstrap/dist/js/bootstrap.bundle.min";
 
+
 const AdminPanel = () => {
 
   
@@ -27,7 +28,8 @@ const AdminPanel = () => {
       </main>
     </div>  */}
 
-     <Dashboard/> 
+     <Dashboard/>
+        {/* <Franchise/>  */}
     </>
   );
 };

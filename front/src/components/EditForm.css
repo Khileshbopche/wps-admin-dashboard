@@ -1,6 +1,6 @@
 
 .employee-form-container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -9,7 +9,17 @@
     border-radius: 5px;
     max-width: 600px;
     margin: auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    background-color: #CFE1FF;
+    width: 80%;
+   height: 560px;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border: 4.5px solid #3f5b87;
+    border-radius: 20px;
   }
   
   
@@ -24,10 +34,15 @@
   
   
   .employee-form-container form {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%;
+    width: 100%; */
+    background-color: #CFE1FF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 30px;
   }
   
   .employee-form-container label {
@@ -38,24 +53,28 @@
   
   .employee-form-container input,
   .employee-form-container select {
-    padding: 10px;
+     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s; 
+    
   }
   
   .employee-form-container input:focus,
   .employee-form-container select:focus {
     border-color: #007bff; 
     outline: none;
+    
   }
   
  
   .gender-group {
-    display: flex;
+    
+   display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 50px;
+  
   }
   
   /* Button styling */
@@ -68,9 +87,18 @@
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
-  }
+  } 
   
   .employee-form-container button:hover {
-    background-color: #45a049;
+    background-color: #8cc58e;
   }
+
+ .gender-group {
   
+  align-items: center; /* Aligns the items vertically */
+  gap: 20px; /* Space between options */
+  margin-top: -5px;
+  margin-left: 100px;
+
+}
+

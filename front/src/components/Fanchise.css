@@ -1,0 +1,272 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    border-radius: 8px;
+}
+
+
+
+
+/* content mai  */
+/* main section css start */
+.contain {
+    background-color: #CFE1FF;
+    max-width: 100%;
+    font-family: 'poppins', sans-serif;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #1a3e8c;
+    
+}
+
+.head {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #333;
+    margin-top: 40px;
+}
+
+
+
+.para {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    padding: 0 20px;
+    margin-block-start: 3em;
+    width:85%;
+    margin-left: 110px;
+}
+
+.formbody {
+    background-color: white;
+    width: 80%;
+   height: 540px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    border: 4.5px solid #3f5b87;
+    border-radius: 20px;
+}
+
+.franchise-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    padding: 0 30px;
+}
+
+.franchise-form input,
+.franchise-form select,
+.franchise-form button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: #CFE1FF;
+    border-bottom: 2px solid #3f5b87;
+}
+
+.franchise-form input::placeholder {
+    color: #555;
+}
+
+.franchise-form button {
+    grid-column: span 2;
+    background-color: #1a3e8c;
+    color: white;
+   
+    border: none;
+    cursor: pointer;
+}
+
+.franchise-form button:hover {
+    background-color: #143271;
+}
+
+.checkbox-group {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    
+}
+   .checklabel{
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+     line-height: 24px;
+      color: #545454;
+     
+     
+   }
+
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.submit {
+    font-weight: 500px;
+    height: 40px;
+    width: 100px;
+    margin-top: -39px;
+    
+    
+    
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+
+    .formbody {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .franchise-form {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 10px;
+        padding: 0 15px;
+        margin-left: 0;
+    }
+
+    .submit {
+        width: 45px;
+        height: 45px;
+        margin-top: 10px;
+    }
+
+    .franchise-form input,
+    .franchise-form select,
+    .franchise-form button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .form-header h1 {
+        font-size: 24px;
+        margin-top: 60px;
+    }
+
+    .para {
+        font-size: 16px;
+        line-height: 24px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 15px;
+        text-align: justify;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+
+
+.formbody {
+width: 95%;
+margin-left: 5px;
+padding: 15px;
+height: 60%;
+}
+
+.franchise-form {
+display:flex;
+flex-wrap: wrap;
+text-align: center;
+margin-left: 20px;
+
+
+
+
+
+}
+.submit{
+    width: 40px;
+    height: 40px;
+}
+
+.franchise-form input,
+.franchise-form select,
+.franchise-form button {
+width: 100%;
+padding: 10px;
+
+
+}
+
+.form-header h1 {
+margin-top: 20px;
+font-size: 22px;
+}
+
+.para {
+font-size: 20px;
+line-height: 20px;
+width: 90%;
+margin: 0;
+padding: 0 10px;
+text-align: justify;
+margin-left: 13px;
+}
+.submit{
+    margin-top: 5px;
+}
+
+
+
+
+}
+
+@media (max-width: 480px) {
+.form-header h1 {
+font-size: 20px;
+}
+
+.para {
+font-size: 13px;
+line-height: 18px;
+padding: 0 5px;
+margin-bottom: 15px;
+}
+
+
+
+.franchise-form {
+gap: 7px;
+padding: 0 10px;
+}
+}
+
+
+
+
+
+
+
+
+ 

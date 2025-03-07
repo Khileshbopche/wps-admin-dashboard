@@ -1,5 +1,6 @@
 
 .employee-container {
+ 
     width: 95%;
     height: auto;
     margin: 0 auto;
@@ -9,31 +10,40 @@
   }
   
   .header-row {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     padding: 10px;
+   /* Adjusted for better spacing */
   }
   
   .header-title {
     width: 10%;
     margin: 0;
     font-size: 18px;
-    background-color: yellow;
+    /* background-color: yellow; */
     font-weight: bold;
+    display: none;
   }
   
   .total-count {
+    
    
-    margin-right: 200px;
     font-weight: 500;
+   margin-bottom: -20px;
   }
-  
+ 
   .create-employee-button {
     padding: 8px 15px;
     background-color: lightgreen;
     border: 1px solid #ddd;
     cursor: pointer;
+    margin-top: -550px;
+   margin-left: 300px;
+   
+  }
+  #createbtn{
+    margin-top: -90px; 
   }
   .create-employee-button:hover{
     background-color: #4f7fd9;
@@ -47,30 +57,35 @@
   }
   
   .search-button {
-    margin-top: -190px;
+    margin-top: -90px;
+    margin-right: 200px;
     background-color: lightblue;
     padding: 8px 15px;
     border: 1px solid #ddd;
     cursor: pointer;
   }
-  
+ 
   .search-input {
-    margin-top: -190px;
-    margin-left: 10px;
+    margin-top: -90px;
+   
     padding: 8px;
     width: 200px;
     border: 1px solid #ddd;
   }
-  
+  .search-button:hover{
+    background-color: #4f7fd9;
+  }
   
   .employee-table-container {
-
+   
     width: 90%;
     margin: 20px auto;
     border: 1px solid #ddd;
   }
   
   .employee-table {
+    /* margin-top: -60px;  */
+    overflow-x:auto;
     width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
@@ -83,11 +98,13 @@
   }
   
   .employee-table th {
+    
     background-color: #f4f4f4;
     font-weight: bold;
   }
   
   .employee-table td {
+    color:#672828;
     background-color: #fff;
   }
   
@@ -210,7 +227,7 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
-.pdf-viewer-modal {
+/* .pdf-viewer-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -252,6 +269,87 @@
 
 .close-pdf-button:hover {
   background: #d43f3f;
+} */
+.pdf-viewer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pdf-viewer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+}
+
+.pdf-viewer-container {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.pdf-viewer-header {
+  background: #343a40;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdf-viewer-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-pdf-button {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.close-pdf-button:hover {
+  color: #dc3545;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.pdf-viewer-footer {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.download-pdf-button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-pdf-button:hover {
+  background-color: #218838;
 }
 /* Prevent body and container overflow */
 
@@ -261,13 +359,152 @@
 /* Employee table styling */
 
 
-.employee-table-container {
-  overflow-x: auto;
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+  .employee-list{
+    overflow-x:auto;
+  }
+
+  .total-count {
+   margin-top: -110px;
+    margin-left: 100px;
+   
+  }
+  .search-input{
+    margin-top: -110px;
+  }
+  .search-button{
+    margin-top: -110px;
+  }
+  .create-employee-button{
+    margin-left: -300px;
+    margin-top:-100px;
+  }
+
+
+}
+
+/*  pagination css */
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* margin: 20px 0;
+  margin-top: -90px; */
+ 
+}
+
+.pagination-controls label {
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top: -110px;
+
+ 
+}
+
+.pagination-controls select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: -110px;
+}
+
+/* Pagination Buttons */
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination-buttons button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #e0e0e0;
+  border-color: #c0c0c0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.pagination-buttons span {
+  font-size: 16px;
+  margin: 0 10px;
+  color: #333;
 }
 
 
+/* delete button click css */
+.confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  width: 300px;
+}
 
+.confirmation-modal h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
 
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-around;
+}
 
+.confirmation-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
+.confirmation-buttons .confirm-btn {
+  background-color: #d9534f;
+  color: white;
+}
 
+.confirmation-buttons .cancel-btn {
+  background-color: #5bc0de;
+  color: white;
+}
+
+/* Overlay effect */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
